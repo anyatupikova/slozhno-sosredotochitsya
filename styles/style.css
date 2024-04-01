@@ -2,4 +2,312 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  font-weight: 400;
+  max-inline-size: 1024px;
+  font-size: 18px;
+  line-height: 1.3;
+  background-attachment: fixed;
+  background: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  padding: 20px 20px 20px 0;
+  position: relative;
+}
+
+.header__menu {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin-inline-start: 20px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  color: var(--color-button);
+  line-height: 1;
+  padding: 1.5px 13px;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+button:hover {
+  border: 1px solid var(--color-button);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  border-bottom: 1px solid var(--color-button);
+}
+
+.header__decoration {
+  position: absolute;
+  font-size: 18px;
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  line-height: calc(25 / 18);
+  color: var(--color-decoration);
+  right: 48px;
+  top: 20px;
+}
+
+.header__decoration::before {
+  position: absolute;
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--color-decoration);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-decoration);
+  margin-inline-start: 43px;
+  margin-block-start: 7px;
+}
+
+.header::before {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--color-decoration);
+  border-inline-end: 1px solid var(--color-decoration);
+  top: 20px;
+  right: 20px;
+}
+
+.header::after {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--color-decoration);
+  border-inline-start: 1px solid var(--color-decoration);
+  left: 20px;
+  bottom: 20px;
+}
+
+.header__title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--color-title);
+  line-height: 0.83;
+  text-shadow: 4px 4px 0 var(--color-shadow);
+  align-self: center;
+
+}
+
+.header__description-text {
+  display: inline-block;
+  max-inline-size: 491px;
+  justify-self: end;
+  align-self: center;
+  white-space: pre-line;
+  margin-block-start: 20px;
+  white-space: pre-line;
+}
+
+.title-decor {
+  background-color: var(--color-bg-title-decor);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-title-decor);
+}
+
+.main {
+  display: grid;
+  gap: 80px;
+  padding: 60px 20px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.section__title {
+  color: var(--color-section-title);
+  max-inline-size: calc(100vw / 4.5);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.section__list {
+  display: grid;
+  gap: 20px;
+}
+
+.section__list-item {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.section__list-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.section__item-text {
+  text-wrap: wrap;
+  color: var(--color-text);
+}
+
+a {
+  text-shadow: 2px 2px 0 var(--color-shadow);
+}
+
+a:hover {
+  border-bottom: 1px solid var(--color-shadow);
+}
+
+a:focus {
+  outline: none;
+  border: 1px solid var(--color-border);
+}
+
+a:focus-visible {
+  border: 1px solid var(--color-border);
+}
+
+.section__list-title-no-weight {
+  font-weight: 400;
+}
+
+.images-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas:
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+  gap: 20px;
+  max-inline-size: 1024px;
+}
+
+.images-item {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  block-size: 100vh;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer::after {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--color-decoration);
+  border-inline-start: 1px solid var(--color-decoration);
+  left: 20px;
+  bottom: 20px;
+}
+
+.footer::before {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--color-decoration);
+  border-inline-end: 1px solid var(--color-decoration);
+  top: 20px;
+  right: 20px;
+}
+
+.footer__text {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--color-title);
+  line-height: 0.83;
+  margin: auto 0;
+  font-weight: 700;
+}
+
+@media (width <=992px) {
+  .page {
+    max-inline-size: 992px;
+  }
+
+  .header__menu {
+    align-items: center;
+    justify-content: end;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+}
+
+@media (width < 768px) {
+  .page {
+    max-inline-size: 768px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .header__title,
+  .footer__text {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__description-text {
+    justify-self: stretch;
+  }
+
+  .main {
+    max-inline-size: 768px;
+    gap: 50px;
+    padding: 40px 10px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section__title {
+    max-inline-size: 100%;
+  }
+
+  .section__list-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
