@@ -9,7 +9,9 @@
   --color-title: rgba(219, 0, 255, 1);
   --color-shadow: rgba(255, 0, 112, 1);
   --color-button: rgba(255, 0, 112, 1);
+  --color-button-hover: rgba(255, 0, 112, 0.4);
   --color-decoration: rgba(255, 0, 112, 1);
+  --color-rec: rgba(255, 0, 112, 1);
   --color-title-decor: rgba(0, 0, 40, 1);
   --color-bg-title-decor: rgba(255, 0, 112, 1);
   --color-section-title: rgba(255, 0, 112, 1);

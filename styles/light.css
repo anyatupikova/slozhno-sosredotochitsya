@@ -11,38 +11,30 @@
 
 .page.theme_light {
   --bg-image: url(../images/cover-image-light.png);
-}
-
-:root .theme_light {
   --bg-color: rgba(255, 241, 247, 1);
   --font-family: 'IBM Plex mono', 'Arial', 'Helvetica', sans-serif;
   --color-title: rgba(255, 194, 230, 1);
   --color-shadow: rgba(255, 0, 112, 1);
   --color-button: rgba(53, 52, 48, 1);
+  --color-button-hover: rgba(50, 49, 45, 0.4);
   --color-decoration: rgba(53, 52, 48, 1);
+  --color-rec: transparent;
   --color-title-decor: rgba(53, 52, 48, 1);
   --color-bg-title-decor: rgba(255, 141, 203, 1);
   --color-section-title: rgba(53, 52, 48, 1);
   --color-text: rgba(53, 52, 48, 1);
   --color-border: rgba(50, 49, 45, 0.4);
-  --bg-image: url(../images/cover-image-light.png);
-
-  .header__decoration {
-    display: none;
-  }
-
-  .footer__text {
-    text-shadow: 2px 2px 0 var(--color-shadow);
-  }
 }
 
-@media (preferens-color-sheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
     --bg-color: rgba(255, 241, 247, 1);
     --font-family: 'IBM Plex mono', 'Arial', 'Helvetica', sans-serif;
     --color-title: rgba(255, 194, 230, 1);
     --color-shadow: rgba(255, 0, 112, 1);
     --color-button: rgba(53, 52, 48, 1);
+    --color-button-hover: rgba(50, 49, 45, 0.4);
+    --color-rec: transparent;
     --color-decoration: rgba(53, 52, 48, 1);
     --color-title-decor: rgba(53, 52, 48, 1);
     --color-bg-title-decor: rgba(255, 141, 203, 1);

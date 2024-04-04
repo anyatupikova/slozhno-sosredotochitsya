@@ -46,17 +46,19 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
+  border: 1px solid var(--color-button-hover);
 }
 
-button:hover {
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-button-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
   border: 1px solid var(--color-button);
 }
 
-button:focus {
-  outline: none;
-}
-
-button:focus-visible {
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--color-button);
 }
 
@@ -66,7 +68,7 @@ button:focus-visible {
   font-family: var(--font-family);
   text-transform: uppercase;
   line-height: calc(25 / 18);
-  color: var(--color-decoration);
+  color: var(--color-rec);
   right: 48px;
   top: 20px;
 }
@@ -76,14 +78,14 @@ button:focus-visible {
   content: "";
   inline-size: 9px;
   block-size: 9px;
-  background-color: var(--color-decoration);
+  background-color: var(--color-rec);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--color-decoration);
+  box-shadow: 0 0 10px var(--color-rec);
   margin-inline-start: 43px;
   margin-block-start: 7px;
 }
 
-.header::before {
+.decorated-zone::before {
   position: absolute;
   content: "";
   inline-size: 25px;
@@ -94,7 +96,7 @@ button:focus-visible {
   right: 20px;
 }
 
-.header::after {
+.decorated-zone::after {
   position: absolute;
   content: "";
   inline-size: 25px;
@@ -116,12 +118,11 @@ button:focus-visible {
 
 .header__description-text {
   display: inline-block;
-  max-inline-size: 491px;
+  max-inline-size: 48vw;
   justify-self: end;
   align-self: center;
   white-space: pre-line;
   margin-block-start: 20px;
-  white-space: pre-line;
 }
 
 .title-decor {
@@ -145,12 +146,13 @@ button:focus-visible {
 
 .section__title {
   color: var(--color-section-title);
-  max-inline-size: calc(100vw / 4.5);
+  max-inline-size: 30.7vw;
   font-weight: 700;
   font-size: 18px;
 }
 
-.section__list {
+.section__list,
+.section__images {
   display: grid;
   gap: 20px;
 }
@@ -168,29 +170,33 @@ button:focus-visible {
 }
 
 .section__item-text {
-  text-wrap: wrap;
   color: var(--color-text);
 }
 
-a {
+.link {
   text-shadow: 2px 2px 0 var(--color-shadow);
+  text-decoration: none;
 }
 
-a:hover {
+.link:hover {
   border-bottom: 1px solid var(--color-shadow);
 }
 
-a:focus {
+.link:focus {
   outline: none;
   border: 1px solid var(--color-border);
 }
 
-a:focus-visible {
+.link:focus-visible {
   border: 1px solid var(--color-border);
 }
 
 .section__list-title-no-weight {
   font-weight: 400;
+}
+
+.section__images {
+  contain: inline-size;
 }
 
 .images-list {
@@ -212,6 +218,26 @@ a:focus-visible {
   object-position: center;
 }
 
+.sunset {
+  grid-area: sunset;
+}
+
+.ice-cream {
+  grid-area: ice-cream;
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.books {
+  grid-area: books;
+}
+
+.street {
+  grid-area: street;
+}
+
 .footer {
   block-size: 100vh;
   padding: 20px;
@@ -221,37 +247,16 @@ a:focus-visible {
   align-items: center;
 }
 
-.footer::after {
-  position: absolute;
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-end: 1px solid var(--color-decoration);
-  border-inline-start: 1px solid var(--color-decoration);
-  left: 20px;
-  bottom: 20px;
-}
-
-.footer::before {
-  position: absolute;
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-start: 1px solid var(--color-decoration);
-  border-inline-end: 1px solid var(--color-decoration);
-  top: 20px;
-  right: 20px;
-}
-
 .footer__text {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   color: var(--color-title);
   line-height: 0.83;
   margin: auto 0;
   font-weight: 700;
+  text-shadow: 2px 2px 0 var(--color-shadow);
 }
 
-@media (width <=992px) {
+@media (width <= 992px) {
   .page {
     max-inline-size: 992px;
   }
@@ -262,6 +267,13 @@ a:focus-visible {
   }
 
   .header__theme-menu-list {
+    flex-direction: column;
+  }
+}
+
+@media (width <= 854px) {
+  .section__list-column {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -281,7 +293,22 @@ a:focus-visible {
   }
 
   .header__description-text {
-    justify-self: stretch;
+    max-inline-size: 100%;
+  }
+
+  .header__decoration {
+    right: 38px;
+    top: 10px;
+  }
+
+  .decorated-zone::before {
+    top: 10px;
+    right: 10px;
+  }
+
+  .decorated-zone::after {
+    left: 10px;
+    bottom: 10px;
   }
 
   .main {
@@ -300,15 +327,9 @@ a:focus-visible {
     max-inline-size: 100%;
   }
 
-  .section__list-column {
-    display: flex;
-    flex-direction: column;
-  }
-
   .images-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 } 
-
