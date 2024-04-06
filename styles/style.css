@@ -46,7 +46,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--color-button-hover);
+  border: 1px solid var(--color-button);
 }
 
 .header__theme-menu-button:hover {
@@ -220,11 +220,11 @@
 }
 
 .images-item:nth-child(3) {
-  grid-area: books;
+  grid-area: tape;
 }
 
 .images-item:nth-child(4) {
-  grid-area: tape;
+  grid-area: books;
 }
 
 .images-item:last-child {
@@ -294,6 +294,7 @@
 
   .header__description-text {
     max-inline-size: 100%;
+    margin-block-start: 0;
   }
 
   .header__decoration {
@@ -325,6 +326,10 @@
 
   .section__title {
     max-inline-size: 100%;
+  }
+
+  .section__images {
+    gap: 10px;
   }
 
   .images-list {
