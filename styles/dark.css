@@ -12,7 +12,7 @@
 .page.theme_dark {
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: rgba(0, 0, 40, 1);
-  --font-family: 'IBM Plex mono', 'Arial', 'Helvetica', sans-serif;
+  --font-family: 'IBM Plex mono', 'Andale Mono', monospace;
   --color-title: rgba(219, 0, 255, 1);
   --color-shadow: rgba(255, 0, 112, 1);
   --color-button: rgba(255, 0, 112, 1);

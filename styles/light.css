@@ -12,7 +12,7 @@
 .page.theme_light {
   --bg-image: url(../images/cover-image-light.png);
   --bg-color: rgba(255, 241, 247, 1);
-  --font-family: 'IBM Plex mono', 'Arial', 'Helvetica', sans-serif;
+  --font-family: 'IBM Plex mono', 'Andale Mono', monospace;
   --color-title: rgba(255, 194, 230, 1);
   --color-shadow: rgba(255, 0, 112, 1);
   --color-button: rgba(53, 52, 48, 1);
@@ -29,7 +29,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: rgba(255, 241, 247, 1);
-    --font-family: 'IBM Plex mono', 'Arial', 'Helvetica', sans-serif;
+    --font-family: 'IBM Plex mono', 'Andale Mono', monospace;
     --color-title: rgba(255, 194, 230, 1);
     --color-shadow: rgba(255, 0, 112, 1);
     --color-button: rgba(53, 52, 48, 1);

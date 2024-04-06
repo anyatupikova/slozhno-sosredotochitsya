@@ -211,31 +211,31 @@
   max-inline-size: 1024px;
 }
 
-.images-item {
+.images-item:first-child {
+  grid-area: sunset;
+}
+
+.images-item:nth-child(2) {
+  grid-area: ice-cream;
+}
+
+.images-item:nth-child(3) {
+  grid-area: books;
+}
+
+.images-item:nth-child(4) {
+  grid-area: tape;
+}
+
+.images-item:last-child {
+  grid-area: street;
+}
+
+.images {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.sunset {
-  grid-area: sunset;
-}
-
-.ice-cream {
-  grid-area: ice-cream;
-}
-
-.tape {
-  grid-area: tape;
-}
-
-.books {
-  grid-area: books;
-}
-
-.street {
-  grid-area: street;
 }
 
 .footer {
